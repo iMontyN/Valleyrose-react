@@ -19,7 +19,7 @@ A login screen for a flowershop 'Valleyrose', with a simple dashboard components
 3. Use the following email and password to sign in to the dashboard. 
 
 ```
-   user: jim@home.com
+   email: jim@home.com
    password: 123456
 ```
 
