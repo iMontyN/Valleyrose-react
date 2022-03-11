@@ -1,28 +1,27 @@
-# React Starter Kit
+## ValleyRose
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A login screen for a flowershop 'Valleyrose', with a simple dashboard components including Appbar and Sidebar, using React and Styled-components.
 
-# Scripts
+## Prerequisites
 
-__Development Build__ 
-> ```npm start``` 
-> Run the following command from your terminal. 
-> Starts development server automatically.  
-> Open browser to  [http://localhost:3000](http://localhost:3000)  
-> project. 
+1. Install all dependencies by running the follwoing command: 
 
- 
- __Production Build__ 
-> ```npm run build``` 
-> Builds the app for production. 
-> Optimizes the build for the best performance.  
-> Open browser to  [http://localhost:3000](http://localhost:3000)  
-> For more information on [deployments](https://facebook.github.io/create-react-app/docs/deployment). 
+```npm
+    npm install 
+```
 
- 
+2. Run the application in development mode, using the following command:
 
- 
+```npm
+    npm start
+```
 
- 
+3. Use the following email and password to sign in to the dashboard. 
 
- 
+```
+   user: jim@home.com
+   password: 123456
+```
+
+### **This project is also deployed on Netlify:** https://valleyrose-react.netlify.app/
+

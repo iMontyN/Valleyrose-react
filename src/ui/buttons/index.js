@@ -6,6 +6,19 @@ const IconButton = styled.button`
     
 `;
 
+const SubmitButton = styled.button `
+    border: ${props => props.border || "1px solid #c2c2c2"};
+    margin: ${props => props.margin || "1rem 0 0 0"};
+    padding: ${props => props.padding || "2rem" };
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid rgb(121, 117, 117);
+    background-color: rgb(165, 163, 163);
+    color: white;
+    padding: .3rem;
+    font-family: 'Julius Sans One', sans-serif;
+`;
+
 const SideBarButton = styled.button`
     background-color: #c0d2f0 ;
     border: none ;
@@ -19,10 +32,11 @@ const SideBarButton = styled.button`
     width: 100%;
     cursor:pointer ;
 
+
     &:hover, &:focus{
         background-color: lightblue;
         color:white;
     }
 `
 
-export{IconButton,SideBarButton} ;
+export{SubmitButton, IconButton, SideBarButton} ;
