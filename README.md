@@ -4,7 +4,7 @@ A login screen for a flowershop 'Valleyrose', with a simple dashboard components
 
 ## Prerequisites
 
-1. Install all dependencies by running the follwoing command: 
+1. Install all dependencies by running the following command: 
 
 ```npm
     npm install 
@@ -19,7 +19,7 @@ A login screen for a flowershop 'Valleyrose', with a simple dashboard components
 3. Use the following email and password to sign in to the dashboard. 
 
 ```
-   user: jim@home.com
+   email: jim@home.com
    password: 123456
 ```
 
