@@ -8,6 +8,7 @@ const AppBarStyles = styled.nav`
 `
 const AppBarItems = styled.ul`
     display:flex;
+    
     justify-content: space-between;
     align-items:center;
 `;
@@ -23,7 +24,8 @@ const AppBarItemGroup = styled.li`
 `;
 
 const AppBarItem = styled.li`
-    
+    display: flex;
+    align-items: center;
 `
 
 

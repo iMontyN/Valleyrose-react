@@ -1,6 +1,6 @@
- import styled from 'styled-components';
+import styled from 'styled-components';
 
- const PanelStyles= styled.section`
+const PanelStyles= styled.section`
     flex:1;
     /* box-shadow: 0 0 2px 0 rgba(0,0,0,0.3) ; */
     /* background-color: white ; */
@@ -10,10 +10,8 @@
 
 const PanelHeader = styled.header`
     h2{
-        /* background-color: #f8f8f8; */
         padding:1rem;
         font-size: 2rem;
-        /* border-radius: 3px ; */
         border-bottom-left-radius:0;
         border-bottom-right-radius:0 ;
         color:#3f3f3f;
@@ -21,7 +19,13 @@ const PanelHeader = styled.header`
 `;
 
 const PanelBody = styled.div`
+    justify-content: center;
+    
     margin: ${props => props.margin || " 3rem"};
+    max-width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
 `;
 
 export {PanelStyles, PanelBody, PanelHeader}

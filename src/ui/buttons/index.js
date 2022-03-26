@@ -39,4 +39,18 @@ const SideBarButton = styled.button`
     }
 `
 
-export{SubmitButton, IconButton, SideBarButton} ;
+
+const ProductButton = styled.button`
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #c2c2c2;
+    padding: 8px 0px;
+    color: #515151;
+    text-transform: uppercase;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 500;
+`
+
+export{SubmitButton, IconButton, SideBarButton, ProductButton} ;

@@ -1,9 +1,9 @@
 import React from 'react'
 import sidebar_logo from '../../assets/img/sidebar_logo.png'
 
-import{RiLogoutBoxLine,RiSettings2Line, RiUser2Line, RiContactsLine, RiMessage2Line, RiCalendarEventLine, RiPlayListAddFill, RiEdit2Line, RiLayoutMasonryFill} from 'react-icons/ri'
+import{RiLogoutBoxLine,RiSettings2Line, RiUser2Line, RiContactsLine, RiMessage2Line, RiCalendarEventLine, RiPlayListAddFill, RiEdit2Line, RiLayoutMasonryFill, RiMenu5Line} from 'react-icons/ri'
 
-import {SideBarListTitle, SideBarList, SideBarStyles, SideBarListContainer, SideBarToggle, SideBarLayout} from './styles'
+import {SideBarListTitle, SideBarList, SideBarStyles, SideBarListContainer, SideBarToggle, SideBarLayout, SideBarLogo} from './styles'
 import { Link } from 'react-router-dom'
 
 import { SideBarButton } from 'ui/buttons'
@@ -13,7 +13,7 @@ import { auth } from "libs/firebase";
 
 function SideBar  (props){
     var toggleVar = "closed"
-    const onHoverSideNav = () => {
+    const onClickMenu = () => {
         if (toggleVar == "closed"){
             document.getElementById("sidebar").style.width = "12rem"
             document.getElementById("sidebar").style.width = "12rem"
@@ -29,12 +29,14 @@ function SideBar  (props){
         signOut(auth);
     }
 
-    
-    
     return( 
-        <SideBarLayout id="sidebar" onMouseOut={onHoverSideNav} onMouseOver={onHoverSideNav}>
+        <SideBarLayout id="sidebar" >
             <SideBarList>
-                <SideBarToggle src={sidebar_logo}></SideBarToggle>
+                <SideBarToggle onClick={onClickMenu}>
+                    <RiMenu5Line size="1.5rem" fill="white"></RiMenu5Line>
+                    <span>ValleyRose</span>
+                </SideBarToggle>
+                <SideBarLogo src={sidebar_logo}></SideBarLogo>
             </SideBarList>
             <SideBarListContainer>
                 <SideBarStyles>
@@ -44,11 +46,11 @@ function SideBar  (props){
                             <RiLayoutMasonryFill size="1.5rem"></RiLayoutMasonryFill>
                             <span>Dashboard</span>
                         </Link>
-                        <Link to="../newproduct">
+                        <Link to="add">
                             <RiPlayListAddFill size="1.5rem"></RiPlayListAddFill>
                             <span>New Product</span>
                         </Link>
-                        <Link to="../edit">
+                        <Link to="edit">
                             <RiEdit2Line size="1.5rem"></RiEdit2Line>
                             <span>Edit</span>
                         </Link>

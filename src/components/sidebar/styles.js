@@ -3,19 +3,20 @@ import styled from 'styled-components';
 const SideBarLayout = styled.div`
 
     height: 100%;
-    width: 4rem; 
+    width: 12rem; 
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
 
+    
     border: 2px solid black;
     background-color: rgb(41, 40, 40);
     transition: 0.5s;
     overflow-x: hidden;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     white-space: nowrap;
-    /* box-shadow: 0 0 1px 0  rgb(255, 255, 255); */
+    
 
     span {
         margin-left: 2.5rem ;
@@ -25,14 +26,20 @@ const SideBarLayout = styled.div`
         text-decoration: none;
         background-color: red;
         cursor: pointer;
-        /* border-left: .5rem solid #ccd2e6; */
         color: #fff;
         background-color: lightblue;
     }
 
 `
-const SideBarToggle = styled.img`
-    padding-top: 1rem;
+const SideBarToggle = styled.div`
+    padding: 1.14rem;
+    border-bottom: 1px solid white;
+    /* background-color: white; */
+`
+
+const SideBarLogo = styled.img`
+
+    padding-top: 2rem;
     width: 7rem;
     display: block;
     margin: auto;
@@ -81,4 +88,4 @@ const SideBarListTitle= styled.div`
 
 
 
-export {SideBarLayout, SideBarToggle, SideBarListContainer, SideBarListTitle ,SideBarStyles, SideBarList}
+export {SideBarLayout, SideBarToggle,SideBarLogo, SideBarListContainer, SideBarListTitle ,SideBarStyles, SideBarList}
