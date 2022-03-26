@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const SideBarLayout = styled.div`
 
     height: 100%;
-    width: 12rem; 
+    width: 4rem; 
     position: fixed;
     z-index: 1;
     top: 0;
@@ -34,7 +34,10 @@ const SideBarLayout = styled.div`
 const SideBarToggle = styled.div`
     padding: 1.14rem;
     border-bottom: 1px solid white;
-    /* background-color: white; */
+   
+   span {
+       color: white;
+   }
 `
 
 const SideBarLogo = styled.img`
