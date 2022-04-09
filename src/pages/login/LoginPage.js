@@ -6,8 +6,7 @@ import {signInWithEmailAndPassword } from "firebase/auth";
 import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-import welcome_logo from '../../assets/img/welcome_logo.png';
+import welcome_logo from "assets/img/welcome_logo.jpg";
 import {LoginPageStyles, SignInSection, FormItem} from './styles';
 import {auth} from "./../../libs/firebase";
 import { Label, Input } from "./../../ui/forms";

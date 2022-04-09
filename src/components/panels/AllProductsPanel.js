@@ -1,48 +1,22 @@
 import React from "react";
+import { useGetProducts } from "hooks/useGetProducts";
+
 
 import {PanelStyles, PanelBody, PanelHeader} from './styles'
-import {ProductPreview} from './../products/ProductPreview'
-import sampleImage from 'assets/img/welcome_logo.png';
+import {ProductCard} from './../products/ProductCard'
 
-function AllProductsPanel({ title, productName, productPrice, productImage, ...props }) {
+
+function AllProductsPanel({ title, ...props }) {
+  const productData = useGetProducts('products')
   return (
         <PanelStyles>
           <PanelHeader>
             <h2>{title  || "Display Panel"}</h2>
           </PanelHeader>
-            
           <PanelBody>
-          <ProductPreview 
-            productImage={sampleImage}
-            productName={'productName'}
-            productPrice={'123'}
-          />
-
-          <ProductPreview 
-            productImage={sampleImage}
-            productName={'productName'}
-            productPrice={'221'}
-          />
-          <ProductPreview 
-            productImage={sampleImage}
-            productName={'productName'}
-            productPrice={'421'}
-          />
-          <ProductPreview
-            productImage={sampleImage} 
-            productName={'productName'}
-            productPrice={'455'}
-          />
-          <ProductPreview
-            productImage={sampleImage} 
-            productName={'productName'}
-            productPrice={'123'}
-          />
-          <ProductPreview 
-            productImage={sampleImage}
-            productName={'productName'}
-            productPrice={'134'}
-          />
+             {/* add the products....firebase */}
+              {productData?  productData.map(product=><ProductCard key={product.uid} product={product}/>)   
+              :  <p>Products</p>}
           </PanelBody>
         </PanelStyles>
   );

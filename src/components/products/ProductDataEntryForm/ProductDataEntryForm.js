@@ -2,11 +2,12 @@ import React from 'react';
 
 import {ProductDataEntryFormStyles,FormGroup ,ProductCategory, ProductImage, ProductName, ProductPrice, ProductDescription, ProductSKU } from './styles'
 import {ProductImageDropBox} from '../ProductImageDropBox'
-import {Label, Input, Select, TextArea} from 'ui/forms'
+import {Label, Input, Select, TextArea, } from 'ui/forms'
+import { SubmitButton, ControlButton} from 'ui/buttons';
 
-function ProductDataEntryForm ({children, handleProductName, handleProductPrice, setProductImage, ...props})  {
+function ProductDataEntryForm ({children, handleProductName, handleProductPrice, handleProductDescription, handleSubmit, setProductImage, ...props})  {
   return (
-        <ProductDataEntryFormStyles  {...props}>
+        <ProductDataEntryFormStyles  {...props} onSubmit={handleSubmit}>
           <ProductImage>
             <Label>Upload an Image</Label>
             <ProductImageDropBox setProductImage={setProductImage}/>
@@ -17,14 +18,14 @@ function ProductDataEntryForm ({children, handleProductName, handleProductPrice,
           </ProductName>
           <FormGroup>
             <ProductCategory>
-                <Label> Select A Category</Label>
+              <Label> Select A Category</Label>
               <Select id="category" name="category">
-                    <option value=""></option>
-                    <option value="bridal">Bridal Bouquet</option>
-                    <option value="fresh-flower">Fresh Flower</option>
-                    <option value="long-life">Long Life Flowers</option>
-                    <option value="ballloons">Ballloons</option>
-                  </Select> 
+                <option value=""></option>
+                <option value="bridal">Bridal Bouquet</option>
+                <option value="fresh-flower">Fresh Flower</option>
+                <option value="long-life">Long Life Flowers</option>
+                <option value="ballloons">Ballloons</option>
+              </Select> 
             </ProductCategory>
             <ProductPrice>
                 <Label>Product Price</Label>
@@ -33,8 +34,14 @@ function ProductDataEntryForm ({children, handleProductName, handleProductPrice,
           </FormGroup>
           <ProductDescription>
             <Label>Product Description</Label>
-            <TextArea rows={6}/>
+            <TextArea onChange={(e)=>handleProductDescription(e.target.value.trim())} rows={6}/>
           </ProductDescription>
+
+          <div>
+            <SubmitButton type="submit">Add Product</SubmitButton>
+          </div>
+          
+
         </ProductDataEntryFormStyles>
   )
 }

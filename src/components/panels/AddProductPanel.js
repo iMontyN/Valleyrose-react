@@ -2,7 +2,7 @@ import React from "react";
 
 import {PanelStyles, PanelBody, PanelHeader} from './styles'
 import {AddProduct} from 'components/products/widgets/AddProduct'
- 
+
 function AddProductPanel({ title, ...props }) {
   return (
         <PanelStyles>
@@ -11,7 +11,6 @@ function AddProductPanel({ title, ...props }) {
           </PanelHeader>
           <PanelBody>
             <AddProduct/>
-
           </PanelBody>
         </PanelStyles>
   );

@@ -2,6 +2,9 @@
 
 A login screen for a flowershop 'Valleyrose', with a simple dashboard components including Appbar and Sidebar, using React and Styled-components.
 
+## known bugs
+when adding a new product, the imageRef is unknown
+
 ## Prerequisites
 
 1. Install all dependencies by running the following command: 

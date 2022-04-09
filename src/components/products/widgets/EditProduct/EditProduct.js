@@ -3,7 +3,7 @@ import React , {useState}from 'react';
 import {EditProductStyles} from './styles'
 import {ProductEditor} from "components/products/ProductEditor"
 import {useNumberFormat} from 'hooks/useNumberFormat'
-import ProductPreview from 'assets/img/welcome_logo.png';
+import ProductPreview from 'assets/img/welcome_logo.jpg';
 
 function EditProduct ({children, ...props})  {
   const [productName, setProductName] = useState('Product Name')

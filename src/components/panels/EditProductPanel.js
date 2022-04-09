@@ -2,7 +2,7 @@ import React from "react";
 
 import {PanelStyles, PanelBody, PanelHeader} from './styles'
 import {EditProduct} from 'components/products/widgets/EditProduct'
- 
+
 function EditProductPanel({ title, ...props }) {
   return (
         <PanelStyles>

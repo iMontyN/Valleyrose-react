@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const ProductDataEntryFormStyles  = styled.div`
+const ProductDataEntryFormStyles  = styled.form`
     max-width: 30rem;
 `;
 

@@ -7,9 +7,6 @@ import {DashBoardPage, LoginPage, PageNotFound} from "./pages";
 
 function App() {
 
-
-  
-
   return (
     <>
           <Routes>

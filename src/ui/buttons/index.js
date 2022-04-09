@@ -20,6 +20,7 @@ const SubmitButton = styled.button `
 `;
 
 const SideBarButton = styled.button`
+    
     background-color: #c0d2f0 ;
     border: none ;
     margin-top: .5rem ;
@@ -51,6 +52,24 @@ const ProductButton = styled.button`
     text-transform: uppercase;
     font-family: 'Marcellus SC', serif;
     font-weight: 500;
+    background-color: ${props => props.bg || "none"};
 `
 
-export{SubmitButton, IconButton, SideBarButton, ProductButton} ;
+const ControlButton = styled.button`
+
+    position:absolute;
+    width: 15rem;
+    top: 11.5rem;
+    display: flex;
+    margin: 1rem;
+    right: 20px;
+    justify-content: space-between;
+
+    border: 2px solid rgb(121, 117, 117);
+    background-color: rgb(165, 163, 163);
+    color: white;
+    padding: 0;
+
+`
+
+export{SubmitButton, ControlButton, IconButton, SideBarButton, ProductButton} ;
